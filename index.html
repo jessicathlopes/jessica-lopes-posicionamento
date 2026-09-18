@@ -649,7 +649,12 @@
     }
 
     .page-header--consultoria { background: linear-gradient(145deg, #354134, #172019); }
-    .page-header--consultoria::before { background-image: var(--capa-consultoria); }
+    .page-header--consultoria::before {
+      left: 64%;
+      background-image: var(--capa-consultoria);
+    }
+    .page-header--consultoria h1,
+    .page-header--consultoria p { max-width: 60%; }
     .page-header--clareza { background: linear-gradient(145deg, #765036, #39271C); }
     .page-header--clareza::before { background-image: var(--capa-clareza); }
 
@@ -812,6 +817,20 @@
       .page-header p {
         max-width: 84%;
         text-shadow: 0 2px 14px rgba(0, 0, 0, .55);
+      }
+      .page-header--consultoria {
+        min-height: 305px;
+        padding-right: 26px;
+      }
+      .page-header--consultoria::before {
+        left: 72%;
+        opacity: .48;
+      }
+      .page-header--consultoria h1,
+      .page-header--consultoria p { max-width: 92%; }
+      .page-header--consultoria h1 {
+        font-size: clamp(38px, 10.8vw, 48px);
+        letter-spacing: -.02em;
       }
       .back-link { margin-bottom: 28px; }
       .category-card, .offer, .analysis-tier { padding-top: 22px; padding-bottom: 23px; }
