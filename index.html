@@ -706,7 +706,7 @@
 
     .page-header--consultoria { background: linear-gradient(145deg, #354134, #172019); }
     .page-header--consultoria::before {
-      left: 64%;
+      left: 71%;
       background-image: var(--capa-consultoria);
     }
     .page-header--consultoria h1,
@@ -857,40 +857,67 @@
       .visual-service-list { gap: 16px; }
       .visual-card,
       .visual-card:hover,
-      .visual-card:focus-visible,
-      .visual-card-copy { min-height: 260px; }
-      .visual-card-art { left: 46%; }
-      .visual-card-copy { width: 68%; padding: 22px 18px 18px; }
-      .visual-card-copy::after { right: -7px; }
+      .visual-card:focus-visible {
+        flex-direction: column;
+        min-height: 0;
+        padding: 0;
+      }
+      .visual-card-art {
+        position: relative;
+        inset: auto;
+        display: block;
+        width: 100%;
+        height: 158px;
+        flex: 0 0 158px;
+      }
+      .visual-card-art::after {
+        background: linear-gradient(0deg, rgba(24, 18, 15, .2), transparent 48%);
+      }
+      .visual-card-copy {
+        width: 100%;
+        min-height: 0;
+        padding: 24px 20px 20px;
+        border-top: 1px solid rgba(247, 240, 231, .15);
+        border-right: 0;
+        box-shadow: none;
+      }
       .detail-art { height: 130px; margin-bottom: 28px; }
       .visual-card .category-description { font-size: 13px; }
       .page-header {
-        min-height: 290px;
+        min-height: 0;
         margin-bottom: 30px;
-        padding: 26px 22px 23px;
+        padding: 180px 22px 24px;
       }
-      .page-header::before { left: 46%; opacity: .55; }
+      .page-header::before {
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: 0;
+        width: 100%;
+        height: 154px;
+        opacity: .78;
+      }
       .page-header h1,
       .page-header p {
-        max-width: 84%;
-        text-shadow: 0 2px 14px rgba(0, 0, 0, .55);
+        max-width: 100%;
+        text-shadow: none;
       }
       .page-header--consultoria {
-        min-height: 305px;
-        padding-right: 26px;
+        min-height: 0;
+        padding: 180px 22px 24px;
       }
       .page-header--consultoria::before {
-        left: 72%;
-        opacity: .48;
+        left: 0;
+        opacity: .78;
       }
       .page-header--consultoria h1,
-      .page-header--consultoria p { max-width: 92%; }
+      .page-header--consultoria p { max-width: 100%; }
       .page-header--consultoria h1 {
         font-size: clamp(38px, 10.8vw, 48px);
         letter-spacing: -.02em;
       }
       .back-link { margin-bottom: 28px; }
-      .category-card, .offer, .analysis-tier { padding-top: 22px; padding-bottom: 23px; }
+      .category-card:not(.visual-card), .offer, .analysis-tier { padding-top: 22px; padding-bottom: 23px; }
       .exclusion, .contrast-box { padding: 21px 20px; }
       .analysis-tier--featured {
         margin: 10px -12px;
@@ -960,7 +987,7 @@
               <span class="visual-card-tag">3 formatos</span>
             </div>
             <h2>Análise de Perfil</h2>
-            <p class="category-description">Descubra o que seu perfil comunica — e o ajuste que deixa sua oferta mais clara.</p>
+            <p class="category-description">Descubra o que seu perfil comunica e o ajuste que deixa sua oferta mais clara.</p>
             <p class="visual-card-highlights">Bio · Feed · Destaques</p>
             <div class="visual-card-footer">
               <p class="price">a partir de R$ 97</p>
@@ -1104,7 +1131,7 @@
       <ul class="included-list">
         <li><strong>Tudo da Vitrine</strong> · a análise completa da sua vitrine</li>
         <li><strong>Últimos 30 dias de conteúdo</strong> · o que você publica, em que proporção, e o que não aparece</li>
-        <li><strong>Teste do intercambiável</strong> · mostramos o que no seu texto poderia ser dito por qualquer concorrente — e o que precisa ganhar assinatura</li>
+        <li><strong>Teste do intercambiável</strong> · mostramos o que no seu texto poderia ser dito por qualquer concorrente e o que precisa ganhar assinatura</li>
         <li><strong>Incoerência entre canais</strong> · onde seu feed, seus destaques e seus stories dizem coisas diferentes</li>
         <li><strong>O que você tem e não usa</strong> · a parte mais interessante do seu material, que hoje está escondida</li>
         <li><strong>Entrega</strong> · PDF de análise, template de execução no Notion e vídeo gravado de 10 minutos, com seu perfil na tela, em 3 dias</li>
